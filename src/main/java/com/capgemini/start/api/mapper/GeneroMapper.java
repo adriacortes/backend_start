@@ -17,6 +17,6 @@ public interface GeneroMapper {
 	@Mapping(target = "id", ignore = true)
 	@Mapping(target = "dataCriacao", ignore = true)
 	@Mapping(target = "dataAlteracao", ignore = true)
-	Genero toEntity(GeneroInputDTO tipo);
+	Genero toEntity(GeneroInputDTO genero);
 
 }

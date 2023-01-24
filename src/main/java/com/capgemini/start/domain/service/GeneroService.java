@@ -42,7 +42,7 @@ public class GeneroService extends AbstractService<Genero,Integer> {
    
    @Override
    public Genero findById(Integer id) {
-	   return repository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Gereno não encontrado!"));
+	   return repository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Genero não encontrado!"));
 	
    }
    
