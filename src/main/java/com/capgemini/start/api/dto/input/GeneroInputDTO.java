@@ -1,5 +1,6 @@
 package com.capgemini.start.api.dto.input;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
@@ -16,7 +17,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class GeneroInputDTO {
 	
-	@NotNull
+	@NotBlank(message="O campo não pode ser em branco!")
 	@Length(max=100)
 	private String descricao;
 
