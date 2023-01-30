@@ -25,7 +25,7 @@ import com.capgemini.start.domain.service.GeneroService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping(value="/api/genero")
+@RequestMapping(value="/api/generos")
 @RequiredArgsConstructor
 public class GeneroResourceImpl implements GeneroResorce{
 	

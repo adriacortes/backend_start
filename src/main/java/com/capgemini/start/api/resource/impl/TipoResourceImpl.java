@@ -62,7 +62,9 @@ public class TipoResourceImpl implements TipoResource{
                 .buildAndExpand(createdEntity.getId())
                 .toUri();
 
-		return ResponseEntity.status(HttpStatus.CREATED).header(HttpHeaders.LOCATION, location.toString()).body(mapper.toDTO(createdEntity));
+		return ResponseEntity.status(HttpStatus.CREATED)
+				.header(HttpHeaders.LOCATION, location.toString())
+				.body(mapper.toDTO(createdEntity));
 		
 	}
 
