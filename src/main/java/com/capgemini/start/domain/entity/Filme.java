@@ -30,7 +30,7 @@ public class Filme {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_filme",nullable = false)
-	private Integer Id;
+	private Long Id;
 	
 /*	@OneToOne
 	@JoinColumn(foreignKey = @ForeignKey(name="id_genero"))

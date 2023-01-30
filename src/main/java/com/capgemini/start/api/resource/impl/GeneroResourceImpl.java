@@ -66,25 +66,25 @@ public class GeneroResourceImpl implements GeneroResorce{
 	
 	/* BUSCAR DADOS POR ID*/
     @Override
-    public ResponseEntity<GeneroDTO> findById(Integer id) {
+    public ResponseEntity<GeneroDTO> findById(Long id) {
     	Genero genero = this.service.findById(id);
     	GeneroDTO generoDto = mapper.toDTO(genero);
     	return ResponseEntity.ok(generoDto);
     }
     
     @Override
-    public ResponseEntity<GeneroDTO> update(Integer id, @Valid GeneroInputDTO genero) {
+    public ResponseEntity<GeneroDTO> update(Long id, @Valid GeneroInputDTO genero) {
     	
     	Genero toUpdate = this.service.findById(id);/*busca a entidade para alterar*/
     	toUpdate.setDescricao(genero.getDescricao()); /*seta a descrição alterada na entidade encontrada*/
     	
-    	Genero update = this.service.update(toUpdate);/*chama a função para alterar no bando de dados e retorna a entidade*/
+    	Genero update = this.service.update(toUpdate);/*chama a função para alterar no banco de dados e retorna a entidade*/
     	
     	return  ResponseEntity.ok(mapper.toDTO(update));
     }
 
 	@Override
-	public ResponseEntity<Void> delete(Integer id) {
+	public ResponseEntity<Void> delete(Long id) {
 		this.service.delete(id);
 		return ResponseEntity.ok().build();
 	}

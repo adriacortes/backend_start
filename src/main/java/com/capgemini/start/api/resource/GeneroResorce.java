@@ -33,13 +33,13 @@ public interface GeneroResorce {
 	
 	@Operation(summary ="Buscar Genero por Id")
 	@GetMapping(value = "/{id}")
-	ResponseEntity<GeneroDTO> findById(@PathVariable Integer id);
+	ResponseEntity<GeneroDTO> findById(@PathVariable Long id);
 	
 	@Operation(summary = "Atualizar cadastro de genero")
 	@PutMapping(value = "/{id}")
-	ResponseEntity<GeneroDTO> update(@PathVariable Integer id,@RequestBody @Valid GeneroInputDTO genero);
+	ResponseEntity<GeneroDTO> update(@PathVariable Long id,@RequestBody @Valid GeneroInputDTO genero);
 	
 	@Operation(summary="Excluindo genero por id")
 	@DeleteMapping(value = "/{id}")
-	ResponseEntity<Void> delete(@PathVariable Integer id);
+	ResponseEntity<Void> delete(@PathVariable Long id);
 }
